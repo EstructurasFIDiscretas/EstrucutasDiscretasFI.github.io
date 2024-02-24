@@ -31,6 +31,22 @@ function loadBooksUnam() {
 
 loadBooksUnam();
 
+function loadInformation() {
+    fetch('ContenidoInformacion.csv')
+        .then(response => response.text())
+        .then(data => {
+            const lines = data.split('\n');
+            const informationContent = lines.join('<br>'); 
+            const informationSection = document.getElementById('info');
+            informationSection.innerHTML = informationContent;
+            showSection('info');
+        })
+        .catch(error => {
+            console.error('Error al cargar la información:', error);
+        });
+}
+
+loadInformation();
 function loadMaterials() {
     const listaMateriales = document.getElementById('listaMateriales');
     listaMateriales.innerHTML = '';

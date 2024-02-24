@@ -281,15 +281,9 @@ h2 {
         margin-top: 300px; 
     }
 
-    #menu {
-        background-color: #111;
-    }
+
 }
-@media only screen and (max-width: 600px) {
-    body {
-        background-color: black; 
-    }
-}
+
 
 
 

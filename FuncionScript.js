@@ -39,7 +39,7 @@ function loadInformation() {
             const informationContent = lines.join('<br>'); 
             const informationSection = document.getElementById('info');
             informationSection.innerHTML = informationContent;
-            showSection('info');
+            // showSection('info');
         })
         .catch(error => {
             console.error('Error al cargar la información:', error);
